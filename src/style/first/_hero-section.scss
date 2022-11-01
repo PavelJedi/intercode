@@ -1,0 +1,32 @@
+.main {
+  padding: 21px 0 38px;
+  min-height: 647px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1364px;
+
+  .text-holder {
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 55px;
+    line-height: 130px;
+  }
+
+  .holder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 25px;
+  }
+
+  .desc-holder {
+    width: 50%;
+    padding-right: 50px;
+  }
+
+  .hero-img-holder {
+    width: 50%;
+  }
+}
