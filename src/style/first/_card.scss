@@ -1,0 +1,54 @@
+.card-container {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .card {
+    transition: all ease-in-out 0.3s;
+    padding: 10px;
+
+    &:hover {
+      transition: all ease-in-out 0.3s;
+      border: 9px solid #00baff;
+    }
+  }
+
+  .card-img-holder {
+    margin-bottom: 20px;
+  }
+
+  .card-img {
+    width: 320px;
+    height: 200px;
+  }
+
+  .card-text-holder {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .card-heading {
+    font-weight: 250;
+    margin-bottom: 10px;
+  }
+
+  .card-prename {
+    margin-bottom: 10px;
+    color: #00baff;
+    font-weight: 800;
+  }
+
+  .card-price {
+    margin-bottom: 10px;
+    font-weight: 250;
+  }
+
+  .card-link {
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
+  }
+}

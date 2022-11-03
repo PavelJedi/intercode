@@ -1,4 +1,12 @@
 .benefits {
-  padding: 90px 0;
+  padding: 50px 0;
   background-color: #1a191a;
+
+  .card-holder {
+    display: flex;
+  }
+
+  .benefits-heading {
+    text-align: center;
+  }
 }

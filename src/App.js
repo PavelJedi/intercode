@@ -1,16 +1,17 @@
 import React from "react";
-import { Header } from "./header/Header";
-import { Hero } from "./hero-section/Hero";
-import { Benefits } from "./benefits/Benefits";
+import { Routes, Route } from "react-router-dom";
+import { First } from "./routes/first/First";
+import { Second } from "./routes/second/Second";
+import { Third } from "./routes/third/Third";
 import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Benefits />
-    </div>
+    <Routes>
+      <Route index element={<First />} />
+      <Route path="models" element={<Second />} />
+      <Route path="models\:id" element={<Third />} />
+    </Routes>
   );
 }
 

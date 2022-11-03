@@ -1,0 +1,28 @@
+.footer {
+  background-color: #1e2022;
+  padding: 50px 0 100px;
+
+  .containter-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  .footer-title {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .footer-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-item {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
