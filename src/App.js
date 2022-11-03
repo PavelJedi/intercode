@@ -10,7 +10,7 @@ function App() {
     <Routes>
       <Route index element={<First />} />
       <Route path="models" element={<Second />} />
-      <Route path="models\:id" element={<Third />} />
+      <Route path="models/:id/config" element={<Third />} />
     </Routes>
   );
 }
