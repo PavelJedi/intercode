@@ -1,10 +1,11 @@
 import React from "react";
 import configuration from "../../datas/Cars";
 import { Link } from "react-router-dom";
+import { Fragment } from "react";
 
 export const Benefits = () => {
   return (
-    <div>
+    <Fragment>
       <div className="benefits">
         <div className="benefits-desc">
           <h2 className="benefits-heading">CHOOSE YOUR CONFIGURATION</h2>
@@ -40,6 +41,6 @@ export const Benefits = () => {
           })}
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };

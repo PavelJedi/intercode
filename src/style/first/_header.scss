@@ -1,11 +1,31 @@
 .header {
-  padding: 20px 50px;
+  padding: 15px 30px;
   min-height: 647px;
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
+  position: relative;
 
-  .header-container {
+  &.active {
+    .header__nav {
+      transform: translateX(0);
+    }
+
+    .nav-opener {
+      &:before {
+        transform: rotate(45deg) translate(-3px, 25px);
+      }
+
+      &:after {
+        transform: rotate(-45deg) translate(1px, -31px);
+      }
+
+      span {
+        transform: rotate(-45deg) translate(-12px, -18px);
+      }
+    }
+  }
+
+  &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -13,41 +33,84 @@
     max-width: 1183px;
     border-bottom: 1px solid #ffffff8f;
     padding-bottom: 30px;
+
+    @include breakpoint("md"){
+      border-bottom: 0;
+    }
   }
 
-  .nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 20px;
-    line-height: 24px;
-    margin-right: 20px;
+  &__nav {
+    transition: all ease-in-out 0.3s;
 
-    .nav-link {
-      text-decoration: none;
+    @include breakpoint("md") {
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      padding: 20px 0;
+      margin-bottom: 50px;
+      z-index: 2;
+      background-color: transparent;
+      transform: translateX(-100%);
+    }
 
-      .nav-item {
-        color: white;
-        margin: 0 20px;
-        padding-bottom: 10px;
+    & .nav__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 20px;
+      line-height: 24px;
+      margin-right: 20px;
 
-        &:first-child {
-          margin: 0 20px 0 0;
+      @include breakpoint("md") {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 20px;
+        width: 100%;
+      }
+
+      & .nav__item {
+        text-decoration: none;
+        display: inline-block;
+        padding-right: 20px;
+
+        @include breakpoint("md") {
+          padding: 0;
+          width: 100%;
         }
 
-        &:last-child {
-          margin: 0 0 0 20px;
-        }
+        & .nav__link {
+          color: white;
+          margin: 0 20px;
+          padding-bottom: 10px;
+          text-decoration: none;
 
-        &:hover {
-          border-bottom: 1px solid aqua;
+          @include breakpoint("md") {
+            display: block;
+            text-align: center;
+            padding: 10px;
+          }
+
+          &:first-child {
+            margin: 0 20px 0 0;
+          }
+
+          &:last-child {
+            margin: 0 0 0 20px;
+          }
+
+          &:hover {
+            border-bottom: 1px solid aqua;
+          }
         }
       }
     }
   }
-  .btn {
+
+  &__btn {
     border: 0;
     background-color: transparent;
     color: white;
@@ -55,22 +118,64 @@
     line-height: 24px;
     margin-right: 20px;
     padding-bottom: 10px;
+    text-decoration: none;
 
     &:hover {
       border-bottom: 1px solid aqua;
     }
   }
-  .btn1 {
-    border: 0;
-    background-color: transparent;
-    color: white;
-    font-size: 20px;
-    line-height: 24px;
-    margin-right: 20px;
-    padding-bottom: 10px;
+}
 
-    &:hover {
-      border-bottom: 1px solid aqua;
-    }
+.nav-opener {
+  display: none;
+
+  @include breakpoint("md") {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    z-index: 3;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &:before {
+    content: "";
+    top: 0;
+    left: 50%;
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: all ease-in-out 0.3s;
+  }
+
+  &:after {
+    content: "";
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: all ease-in-out 0.3s;
+  }
+
+  span {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: all ease-in-out 0.3s;
   }
 }

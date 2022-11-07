@@ -3,7 +3,11 @@
   min-height: 647px;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1364px;
+  max-width: 1440px;
+
+  &.main::before {
+    opacity: 0.6;
+  }
 
   .text-holder {
     text-align: center;

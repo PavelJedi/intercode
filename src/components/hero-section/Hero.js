@@ -1,11 +1,16 @@
 import React from "react";
 import hero from "../../img/hero.png";
 import about from "../../img/about.png";
+import { Fragment } from "react";
 
 export const Hero = () => {
+  const style = {
+    backgroundImage: `url(${hero})`,
+  };
+
   return (
-    <div>
-      <main className="main" style={{ backgroundImage: `url(${hero})` }}>
+    <Fragment>
+      <main className="main" style={style}>
         <div className="container">
           <div className="text-holder">
             <h1 className="heading">ABOUT US</h1>
@@ -31,6 +36,6 @@ export const Hero = () => {
           </div>
         </div>
       </main>
-    </div>
+    </Fragment>
   );
 };
