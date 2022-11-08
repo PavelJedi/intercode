@@ -1,18 +1,19 @@
 import React from "react";
 import { list } from "../../datas/Cars";
+import { Fragment } from "react";
 
 export const Footer = () => {
   return (
-    <div>
+    <Fragment>
       <footer className="footer">
-        <div className="containter-footer">
+        <div className="container footer__container">
           {list.map((car) => {
             return (
-              <div key={car.id}>
-                <h3 className="footer-title">{car.title}</h3>
-                <ul className="footer-ul">
-                  {car.items.map((option) => (
-                    <li className="footer-item">{option}</li>
+              <div key={car.id} className="footer__card">
+                <h3 className="footer__title">{car.title}</h3>
+                <ul className="footer__list">
+                  {car.items.map(({option}) => (
+                    <li className="list__item">{option}</li>
                   ))}
                 </ul>
               </div>
@@ -20,6 +21,6 @@ export const Footer = () => {
           })}
         </div>
       </footer>
-    </div>
+    </Fragment>
   );
 };

@@ -2,11 +2,55 @@
   padding: 50px 0;
   background-color: #1a191a;
 
-  .card-holder {
-    display: flex;
+  &__desc{
+    margin-bottom: 35px;
   }
 
-  .benefits-heading {
+  &__card-holder {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint("sm") {
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    padding: 10px 20px;
+    width: calc(100% / 3);
+
+    @include breakpoint("sm") {
+      width: 100%;
+    }
+  }
+
+  &__heading {
     text-align: center;
+    margin: 0;
+  }
+
+  &__button-holder {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    width: 80%;
+    text-decoration: none;
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__item {
+    padding: 5px 0;
   }
 }

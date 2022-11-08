@@ -18,7 +18,7 @@ export const Header = () => {
   return (
     <Fragment>
       <header className={`header ${isActive ? "active" : ""}`} style={styles}>
-        <div className="header__container">
+        <div className="container header__container">
           <div className="header__logo-holder">
             <a className="logo-link" href="#">
               <img className="logo" alt="logo" src={logo} />

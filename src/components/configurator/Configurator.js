@@ -19,7 +19,7 @@ export const Configurator = () => {
   };
 
   const findColor = carColors.find((item) => {
-    return item.image;
+    return item.model === data.model;
   });
 
   useEffect(() => {

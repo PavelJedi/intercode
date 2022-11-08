@@ -2,27 +2,29 @@
   background-color: #1e2022;
   padding: 50px 0 100px;
 
-  .containter-footer {
+  .footer__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 50px;
   }
 
-  .footer-title {
+  &__card {
+    padding: 10px 10px;
+  }
+
+  &__title {
     font-size: 20px;
     line-height: 27px;
   }
 
-  .footer-ul {
+  &__list {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
 
-  .footer-item {
-    padding: 10px 0;
-    font-size: 14px;
-    line-height: 22px;
+    &__item {
+      padding: 10px 0;
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 }

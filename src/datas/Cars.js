@@ -15,25 +15,61 @@ import bmwx5white from "../img/bmwx5white.png";
 import bmwx5black from "../img/bmwx5black.png";
 import bmwx5grey from "../img/bmwx5grey.png";
 import bmwx5blue from "../img/bmwx5blue.png";
+import bmwx3white from "../img/bmwx3white.png";
+import bmwx3black from "../img/bmwx3black.png";
+import bmwx3grey from "../img/bmwx3grey.png";
+import bmwx3blue from "../img/bmwx3blue.png";
+import bmwixwhite from "../img/bmwixwhite.png";
+import bmwixblack from "../img/bmwixblack.png";
+import bmwixgrey from "../img/bmwixgrey.png";
+import bmwixblue from "../img/bmwixblue.png";
+import bmwx4white from "../img/bmw4white.png";
+import bmwx4black from "../img/bmw4black.png";
+import bmwx4grey from "../img/bmw4grey.png";
+import bmwx4blue from "../img/bmw4blue.png";
+import bmw1white from "../img/bmw1white.png";
+import bmw1black from "../img/bmw1black.png";
+import bmw1grey from "../img/bmw1grey.png";
+import bmw1blue from "../img/bmw1blue.png";
+import bmw7white from "../img/bmw7white.png";
+import bmw7black from "../img/bmw7black.png";
+import bmw7grey from "../img/bmw7grey.png";
+import bmw7blue from "../img/bmw7blue.png";
+import face from "../img/face.svg";
+import twitter from "../img/twitter.svg";
+import inst from "../img/inst.svg";
+import youtube from "../img/youtube.svg";
 
 const configuration = [
   {
     id: 1,
     name: "BMW X5",
     img: "x5",
-    desc: ["option1", "option2", "option3"],
+    desc: {
+      fuel: "Petrol",
+      year: 2020,
+      eng: "Automatic",
+    },
   },
   {
     id: 2,
     name: "BMW X3",
     img: "x3",
-    desc: ["option1", "option2", "option3"],
+    desc: {
+      fuel: "Petrol",
+      year: 2021,
+      eng: "Manual",
+    },
   },
   {
     id: 3,
     name: "BMW iX",
     img: "ix",
-    desc: ["option1", "option2", "option3"],
+    desc: {
+      fuel: "Electric",
+      year: 2022,
+      eng: "Automatic",
+    },
   },
 ];
 
@@ -51,27 +87,22 @@ const list = [
   {
     id: 2,
     title: "Partnerships",
-    items: ["My BMW App", "BMW All-Electric", "Plug-in Hybryd Electric"],
+    items: ["BMW Motosport", "BMW Championship", "Monticello Motor Club"],
   },
   {
     id: 3,
     title: "Online Shopping Tools",
     items: [
-      "My BMW App",
-      "BMW All-Electric",
-      "Plug-in Hybryd Electric",
-      "Concept Vehicles",
+      "Build Your Own",
+      "Shop Pre-Owned Inventory",
+      "Shop Online",
+      "Find a BMW Center",
     ],
   },
   {
     id: 4,
     title: "Social",
-    items: [
-      "My BMW App",
-      "BMW All-Electric",
-      "Plug-in Hybryd Electric",
-      "Concept Vehicles",
-    ],
+    items: [face, twitter, inst, youtube],
   },
 ];
 
@@ -160,6 +191,56 @@ const carColors = [
       black: bmwx5black,
       grey: bmwx5grey,
       blue: bmwx5blue,
+    },
+  },
+  {
+    id: 2,
+    model: "BMW X3",
+    image: {
+      white: bmwx3white,
+      black: bmwx3black,
+      grey: bmwx3grey,
+      blue: bmwx3blue,
+    },
+  },
+  {
+    id: 3,
+    model: "BMW iX",
+    image: {
+      white: bmwixwhite,
+      black: bmwixblack,
+      grey: bmwixgrey,
+      blue: bmwixblue,
+    },
+  },
+  {
+    id: 4,
+    model: "BMW 4",
+    image: {
+      white: bmwx4white,
+      black: bmwx4black,
+      grey: bmwx4grey,
+      blue: bmwx4blue,
+    },
+  },
+  {
+    id: 5,
+    model: "BMW 1",
+    image: {
+      white: bmw1white,
+      black: bmw1black,
+      grey: bmw1grey,
+      blue: bmw1blue,
+    },
+  },
+  {
+    id: 6,
+    model: "BMW 7",
+    image: {
+      white: bmw7white,
+      black: bmw7black,
+      grey: bmw7grey,
+      blue: bmw7blue,
     },
   },
 ];

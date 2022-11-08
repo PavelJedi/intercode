@@ -55,10 +55,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
 
-    &__item {
-      text-decoration: none;
-    }
+  &__item {
+    text-decoration: none;
+    font-weight: 320;
+    font-size: 20px;
+    line-height: 40px;
   }
 
   &__title {
@@ -71,6 +74,10 @@
     margin-bottom: 30px;
   }
 
+  &__cards {
+    text-align: center;
+  }
+
   &__card {
     margin: 10px 10px;
     transition: all ease-in-out 0.3s;
@@ -80,11 +87,14 @@
     }
   }
 
+  &__cost-holder {
+    display: block;
+  }
+
   &__card_wheel {
     border-radius: 80%;
-    margin: 0 10px;
+    margin: 0 10px 20px;
     transition: all ease-in-out 0.3s;
-    margin-bottom: 80px;
 
     &:hover {
       box-shadow: 2px 0px 14px 1px rgba(17, 200, 228, 0.69);
@@ -95,6 +105,7 @@
   &__card-wheels {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 80px;
   }
 
   &__img {
