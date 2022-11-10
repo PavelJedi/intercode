@@ -1,13 +1,15 @@
 .config {
-  text-align: center;
-  color: black;
-  padding: 10px 0 10px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 1;
+  &__header {
+    text-align: center;
+    color: black;
+    padding: 10px 0 10px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+  }
 
   &__container {
     display: flex;
@@ -15,10 +17,25 @@
     margin: 0 20px;
     color: black;
     z-index: 2;
+
+    @include breakpoint("md") {
+      margin: 0;
+      z-index: 0;
+      position: relative;
+    }
   }
 
   &__first {
     width: 60%;
+
+    @include breakpoint("md") {
+      width: 100%;
+      display: flex;
+      position: sticky;
+      top: 0;
+      box-shadow: 0px 7px 10px 0px #c5d0d3;
+      background-color: white;
+    }
   }
 
   &__second {
@@ -26,12 +43,32 @@
     border: 1px solid #fff;
     box-shadow: 0px 6px 5px 1px rgb(0 0 0 / 75%);
     padding-top: 20px;
+
+    @include breakpoint("md") {
+      width: 100%;
+      overflow: scroll;
+      height: 100%;
+    }
+  }
+
+  &__options {
+    padding: 0 10px;
+
+    @include breakpoint("md") {
+      width: 100%;
+      overflow: scroll;
+      height: 100%;
+    }
   }
 
   &__title {
     font-weight: 300;
     font-size: 36px;
     line-height: 42px;
+
+    @include breakpoint("md") {
+      text-align: center;
+    }
   }
 
   &__label {
@@ -46,6 +83,21 @@
 
   &__info {
     text-align: center;
+
+    @include breakpoint("md") {
+      padding-top: 20px;
+      width: 30%;
+    }
+  }
+
+  &__photo-holder {
+    @include breakpoint("md") {
+      width: 70%;
+    }
+
+    @include breakpoint("xs") {
+      height: 100%;
+    }
   }
 
   &__list {
@@ -55,32 +107,63 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
+    @include breakpoint("md") {
+      justify-content: stretch;
+    }
   }
 
   &__item {
     text-decoration: none;
     font-weight: 320;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 40px;
   }
 
   &__title {
-    margin: 0 0 10px 20px;
+    margin: 0 10px 20px;
+
+    @include breakpoint("xs") {
+      font-size: 30px;
+    }
   }
 
   &__card-holder {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 30px;
+
+    @include breakpoint("xl") {
+      justify-content: center;
+    }
+
+    @include breakpoint("md") {
+      justify-content: space-evenly;
+    }
   }
 
   &__cards {
     text-align: center;
+    width: calc(100% / 4);
+
+    @include breakpoint("md") {
+      width: 15%;
+    }
+
+    @include breakpoint("sm") {
+      width: 20%;
+    }
+
+    @include breakpoint("xs") {
+      width: 20%;
+    }
   }
 
   &__card {
-    margin: 10px 10px;
+    margin: 0 10px 15px 10px;
     transition: all ease-in-out 0.3s;
+
     &:hover {
       box-shadow: 2px 0px 14px 1px rgba(17, 200, 228, 0.69);
       transition: all ease-in-out 0.3s;
@@ -105,11 +188,12 @@
   &__card-wheels {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     margin-bottom: 80px;
-  }
 
-  &__img {
-    width: 100px;
+    @include breakpoint("xs") {
+      margin-bottom: 50px;
+    }
   }
 
   &__total {
@@ -117,6 +201,32 @@
 
     margin: 0;
     text-align: center;
+  }
+
+  &__total-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+  }
+
+  &__default {
+    background: linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    display: inline-block;
+    color: #050505;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 10px 10px;
+    text-decoration: none;
+
+    &:hover {
+      background: linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+      background-color: #ffffff;
+      box-shadow: 0px 0px 5px 2px #11eff7;
+    }
   }
 }
 

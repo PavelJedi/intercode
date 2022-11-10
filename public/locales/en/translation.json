@@ -1,0 +1,52 @@
+{
+  "header": {
+    "list": {
+      "li1": "Models",
+      "li2": "Find & Buy",
+      "li3": "Availability",
+      "li4": "Service and support"
+    }
+  },
+  "hero": {
+    "desc": {
+      "title": "ABOUT US",
+      "text": "The BMW Group sets trends in production technology and sustainability as an innovation leader with an intelligent material mix, a technological shift towards digitalisation and resource-efficient production. At the same time, flexibility and continuous optimisation of value chains ensure competitiveness."
+    }
+  },
+  "benefits": {
+    "script": "CHOOSE YOUR CONFIGURATION",
+    "btns": "Сonfigure now",
+    "fuel": {
+      "petrol": "Petrol"
+    }
+  },
+  "models": {
+    "fules": "Fuel Type:",
+
+    "model1": {
+      "fuel": "petrol"
+    },
+    "model2": {
+      "fuel": "electric"
+    },
+    "model3": {
+      "fuel": "petrol"
+    },
+
+    "fuel": {
+      "petrol": "Petrol",
+      "electric": "Electric"
+    },
+    "color": {
+      "white": "white",
+      "black": "black",
+      "grey": "grey",
+      "blue": "blue"
+    },
+    "wheels": {
+      "slim": "slim",
+      "wide": "wide",
+      "clear": "clear"
+    }
+  }
+}

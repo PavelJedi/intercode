@@ -18,15 +18,25 @@
   &__card {
     padding: 10px 20px;
     width: calc(100% / 3);
+    text-align: center;
+
+    @include breakpoint("md") {
+      padding: 5px 5px;
+    }
 
     @include breakpoint("sm") {
       width: 100%;
+      margin-bottom: 40px;
     }
   }
 
   &__heading {
     text-align: center;
     margin: 0;
+  }
+
+  &__image-holder {
+    margin-bottom: 15px;
   }
 
   &__button-holder {
@@ -51,6 +61,6 @@
   }
 
   &__item {
-    padding: 5px 0;
+    margin-bottom: 10px;
   }
 }

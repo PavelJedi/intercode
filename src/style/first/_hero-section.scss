@@ -1,15 +1,6 @@
 .main {
   position: relative;
 
-  @include breakpoint("md") {
-    padding: 10px 0 10px;
-    min-height: 460px;
-  }
-
-  @include breakpoint("sm") {
-    min-height: 550px;
-  }
-
   &.main::before {
     content: "";
     opacity: 0.6;
@@ -30,6 +21,12 @@
     &__container {
       max-width: 1440px;
       min-height: 647px;
+      padding-top: 1px;
+
+      @include breakpoint("sm") {
+        padding: 10px 0 10px;
+        min-height: 460px;
+      }
     }
 
     &__text-holder {
@@ -57,7 +54,8 @@
       align-items: center;
       margin: 0 25px;
 
-      @include breakpoint("sm") {
+      @include breakpoint("md") {
+        justify-content: center;
         flex-direction: column;
       }
     }
@@ -68,20 +66,28 @@
       font-size: 18px;
       font-weight: 500;
 
-      @include breakpoint("sm") {
+      @include breakpoint("md") {
         padding: 0;
         margin: 0 0 15px;
-        width: 60%;
+        width: 100%;
+        text-align: center;
+      }
+
+      @include breakpoint("sm") {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 500;
       }
     }
 
     &__img-holder {
       width: 50%;
 
+      @include breakpoint("md") {
+        width: 100%;
+      }
+
       @include breakpoint("sm") {
-        width: 70%;
+        width: 80%;
       }
     }
   }

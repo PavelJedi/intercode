@@ -1,7 +1,7 @@
 import React from "react";
 import { colors, wheels } from "../../datas/Cars";
 
-export const Select = ({ data, handleColor, handleWheels }) => {
+export const Select = ({ data, handleColor, handleWheels, setDefault }) => {
   return (
     <div>
       <div className="config__options">
@@ -49,7 +49,17 @@ export const Select = ({ data, handleColor, handleWheels }) => {
             );
           })}
         </div>
-        <h3 className="config__total">Total price is {data?.totalPrice}$</h3>
+        <div className="config__total-holder">
+          <h3 className="config__total">Total price is {data?.totalPrice}$</h3>
+          <button
+            className="config__default"
+            onClick={(e) => {
+              setDefault();
+            }}
+          >
+            Set default
+          </button>
+        </div>
       </div>
     </div>
   );

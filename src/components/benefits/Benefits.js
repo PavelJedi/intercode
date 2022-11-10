@@ -1,15 +1,17 @@
 import React from "react";
 import configuration from "../../datas/Cars";
 import { Link } from "react-router-dom";
-import { Fragment } from "react";
+import { useTranslation } from "react-i18next";
 
 export const Benefits = () => {
+  const { t } = useTranslation();
+
   return (
-    <Fragment>
+    <>
       <section className="benefits">
         <div className="container benefits__container">
           <div className="benefits__desc">
-            <h2 className="benefits__heading">CHOOSE YOUR CONFIGURATION</h2>
+            <h2 className="benefits__heading">{t("benefits.script")}</h2>
           </div>
           <div className="benefits__card-holder">
             {configuration.map(({ id, name, img, desc }) => {
@@ -28,11 +30,15 @@ export const Benefits = () => {
                       className="benefits__button"
                       to={`/models/${id}/config`}
                     >
-                      Сonfigure now
+                      {t("benefits.btns")}
                     </Link>
                   </div>
                   <ul className="benefits__list">
-                    <li className="benefits__item">Fuel: {desc.fuel}</li>
+                    <li className="benefits__item">
+                      {t("models.fules")}
+                      {" "}
+                      {t(`models.model${id}.fuel`)}
+                    </li>
                     <li className="benefits__item">Year: {desc.year}</li>
                     <li className="benefits__item">Transmission: {desc.eng}</li>
                   </ul>
@@ -42,6 +48,6 @@ export const Benefits = () => {
           </div>
         </div>
       </section>
-    </Fragment>
+    </>
   );
 };

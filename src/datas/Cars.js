@@ -1,9 +1,3 @@
-import bmw from "../img/bmwx5.jpeg";
-import bmw1 from "../img/bmwx3.jpeg";
-import bmw2 from "../img/bmwii.jpeg";
-import bmw3 from "../img/bmw4.jpeg";
-import bmw4 from "../img/bmw1.jpeg";
-import bmw5 from "../img/bmw7.jpeg";
 import color1 from "../img/color1.webp";
 import color2 from "../img/color2.webp";
 import color3 from "../img/color3.webp";
@@ -35,10 +29,7 @@ import bmw7white from "../img/bmw7white.png";
 import bmw7black from "../img/bmw7black.png";
 import bmw7grey from "../img/bmw7grey.png";
 import bmw7blue from "../img/bmw7blue.png";
-import face from "../img/face.svg";
-import twitter from "../img/twitter.svg";
-import inst from "../img/inst.svg";
-import youtube from "../img/youtube.svg";
+
 
 const configuration = [
   {
@@ -102,14 +93,19 @@ const list = [
   {
     id: 4,
     title: "Social",
-    items: [face, twitter, inst, youtube],
+    items: [
+      "Build Your Own",
+      "Shop Pre-Owned Inventory",
+      "Shop Online",
+      "Find a BMW Center",
+    ],
   },
 ];
 
 const cars = [
   {
     id: 1,
-    img: bmw,
+    img: bmwx5white,
     model: "BMW X5",
     fuel: "Petrol",
     price: 64040,
@@ -119,7 +115,7 @@ const cars = [
   },
   {
     id: 2,
-    img: bmw1,
+    img: bmwx3white,
     model: "BMW X3",
     fuel: "Petrol",
     price: 63190,
@@ -129,17 +125,17 @@ const cars = [
   },
   {
     id: 3,
-    img: bmw2,
+    img: bmwixwhite,
     model: "BMW iX",
     fuel: "Electric",
     price: 74000,
-    color: "red",
+    color: "white",
     wheel: "slim",
     maxSpeed: 230,
   },
   {
     id: 4,
-    img: bmw3,
+    img: bmwx4white,
     model: "BMW 4",
     fuel: "Petrol",
     price: 54550,
@@ -149,7 +145,7 @@ const cars = [
   },
   {
     id: 5,
-    img: bmw4,
+    img: bmw1white,
     model: "BMW 1",
     fuel: "Petrol",
     price: 74000,
@@ -159,7 +155,7 @@ const cars = [
   },
   {
     id: 6,
-    img: bmw5,
+    img: bmw7white,
     model: "BMW 7",
     fuel: "Electric",
     price: 99900,

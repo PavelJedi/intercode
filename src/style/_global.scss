@@ -17,6 +17,8 @@ img {
 
 .container {
   padding: 0 30px;
+
+  @include breakpoint("md") {
+    padding: 0 15px;
+  }
 }
-
-

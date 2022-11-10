@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import background from "../../img/background-header.png";
 import logo from "../../img/logo.svg";
 import { Link } from "react-router-dom";
-import { Fragment } from "react";
 
 export const Header = () => {
   const [isActive, setActive] = useState(false);
@@ -15,8 +15,14 @@ export const Header = () => {
     backgroundImage: `url(${background})`,
   };
 
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
-    <Fragment>
+    <>
       <header className={`header ${isActive ? "active" : ""}`} style={styles}>
         <div className="container header__container">
           <div className="header__logo-holder">
@@ -28,40 +34,46 @@ export const Header = () => {
             <ul className="nav__list">
               <li className="nav__item ">
                 <Link className="nav__link" to="/models">
-                  Models
+                  {t("header.list.li1")}
                 </Link>
               </li>
               <li className="nav__item">
                 <Link className="nav__link" to="/#">
                   {" "}
-                  Find & Buy
+                  {t("header.list.li2")}
                 </Link>
               </li>
               <li className="nav__item">
                 <Link className="nav__link" to="/#">
-                  Availability
+                  {t("header.list.li3")}
                 </Link>
               </li>
               <li className="nav__item">
                 <Link className="nav__link" to="/#">
-                  Service and support
+                  {t("header.list.li4")}
                 </Link>
               </li>
             </ul>
           </nav>
-          {/* <div className="header__btn-holder">
-            <a className="header__btn" href="#">
-              About us
-            </a>
-            <a className="header__btn" href="#">
-              Shop
-            </a>
-          </div> */}
-          <button className="nav-opener" onClick={toggleClass}>
-            <span></span>
-          </button>
+          <div className="header__button-holder">
+            <button
+              className="header__button"
+              onClick={() => changeLanguage("ua")}
+            >
+              ua
+            </button>
+            <button
+              className="header__button"
+              onClick={() => changeLanguage("en")}
+            >
+              en
+            </button>
+            <button className="nav-opener" onClick={toggleClass}>
+              <span></span>
+            </button>
+          </div>
         </div>
       </header>
-    </Fragment>
+    </>
   );
 };

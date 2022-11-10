@@ -68,33 +68,40 @@ export const Configurator = () => {
   );
   const finalPrice = sumCost + defaultData.totalPrice;
 
+  function setDefaultHandler() {
+    setData(defaultData);
+  }
+
   return (
     <div>
-      <header className="config">{data?.model}</header>
       <main>
-        <div className="config__container">
-          <div className="config__first">
-            <div className="config__photo-holder">
-              <img src={data?.img} alt="photos" />
+        <section className="config">
+          <header className="config__header">{data?.model}</header>
+          <div className="config__container">
+            <div className="config__first">
+              <div className="config__photo-holder">
+                <img src={data?.img} alt="photos" />
+              </div>
+              <div className="config__info">
+                <ul className="config__list">
+                  <li className="config__item">Model: {data?.model}</li>
+                  <li className="config__item">Fuel type: {data?.fuel}</li>
+                  <li className="config__item">Max Speed: {data?.maxSpeed}</li>
+                  <li className="config__item">Color: {data?.color}</li>
+                  <li className="config__item">Wheels: {data?.wheel}</li>
+                </ul>
+              </div>
             </div>
-            <div className="config__info">
-              <ul className="config__list">
-                <li className="config__item">Model: {data?.model}</li>
-                <li className="config__item">Fuel type: {data?.fuel}</li>
-                <li className="config__item">Max Speed: {data?.maxSpeed}</li>
-                <li className="config__item">Color: {data?.color}</li>
-                <li className="config__item">Wheels: {data?.wheel}</li>
-              </ul>
+            <div className="config__second">
+              <Select
+                data={data}
+                handleColor={handleColor}
+                handleWheels={handleWheels}
+                setDefault={setDefaultHandler}
+              />
             </div>
           </div>
-          <div className="config__second">
-            <Select
-              data={data}
-              handleColor={handleColor}
-              handleWheels={handleWheels}
-            />
-          </div>
-        </div>
+        </section>
       </main>
     </div>
   );
